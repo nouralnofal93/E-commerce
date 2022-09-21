@@ -86,8 +86,8 @@ class ListNewItemHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () =>
-          Navigator.of(context).pushNamed(AppRoutes.productDetailsRout),
+      onTap: () => Navigator.of(context, rootNavigator: true)
+          .pushNamed(AppRoutes.productDetailsRout),
       child: DecoratedBox(
         decoration: const BoxDecoration(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [

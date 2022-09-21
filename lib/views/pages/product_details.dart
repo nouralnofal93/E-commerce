@@ -7,7 +7,11 @@ class ProductDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('T-shirt'),
+        title: Center(
+            child: Text(
+          'T-shirt',
+          style: Theme.of(context).textTheme.headline6,
+        )),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.share))],
       ),
     );
