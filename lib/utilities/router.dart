@@ -1,3 +1,4 @@
+import 'package:e_commerce/models/product.dart';
 import 'package:e_commerce/utilities/routes.dart';
 import 'package:e_commerce/views/pages/bottom_navbar.dart';
 import 'package:e_commerce/views/pages/landing_page.dart';
@@ -23,8 +24,11 @@ Route<dynamic> onGenerate(RouteSettings settings) {
         settings: settings,
       );
     case AppRoutes.productDetailsRout:
+      final product = settings.arguments as Product;
       return CupertinoPageRoute(
-        builder: (_) => const ProductDetails(),
+        builder: (_) => ProductDetails(
+          product: product,
+        ),
         settings: settings,
       );
     case AppRoutes.landingPageRoute:

@@ -87,7 +87,7 @@ class ListNewItemHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => Navigator.of(context, rootNavigator: true)
-          .pushNamed(AppRoutes.productDetailsRout),
+          .pushNamed(AppRoutes.productDetailsRout, arguments: product),
       child: DecoratedBox(
         decoration: const BoxDecoration(),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
